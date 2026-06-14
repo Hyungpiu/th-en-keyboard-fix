@@ -33,7 +33,7 @@ export default function Home() {
           </p>
 
           <h1 className="text-4xl font-bold tracking-tight text-[#4F252E]">
-            แก้พิมพ์ผิดแป้นไทย/อังกฤษ
+            แก้พิมพ์ผิดแป้นไทย/อังกฤษ (Correct typos on Thai/English keyboard.)
           </h1>
 
           <p className="mt-4 text-[#4F252E]/80">
