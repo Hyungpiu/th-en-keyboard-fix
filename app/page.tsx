@@ -32,13 +32,13 @@ export default function Home() {
             TH/EN Keyboard Fix
           </p>
 
-          <h1 className="text-4xl font-bold tracking-tight text-[#4F252E]">
-            แก้พิมพ์ผิดแป้นไทย/อังกฤษ (Correct typos on Thai/English keyboard.)
-          </h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-center">
+  พิมพ์ไรเนี่ย?
+</h1>
 
-          <p className="mt-4 text-[#4F252E]/80">
-            วางข้อความที่พิมพ์ผิดแป้น แล้วให้เว็บแปลงให้อัตโนมัติ
-          </p>
+<p className="text-center text-gray-600 mt-2 mb-6">
+  เว็บแก้พิมพ์ผิดแป้นไทยอังกฤษ แปลงข้อความไทย ↔ อังกฤษ ได้ทันที ฟรี ไม่ต้องติดตั้ง
+</p>
         </div>
 
         <div className="rounded-3xl border-2 border-[#F4AE52] bg-[#FFF7C5] p-5 shadow-2xl">
@@ -54,18 +54,34 @@ export default function Home() {
             className="w-full resize-none rounded-2xl border-2 border-[#F4AE52] bg-white p-4 text-lg text-[#4F252E] outline-none placeholder:text-[#4F252E]/40 focus:border-[#4F252E]"
           />
 
-          <div className="mt-4 flex items-center justify-between gap-3">
-            <span className="rounded-full bg-[#F4AE52] px-4 py-2 text-sm font-semibold text-[#4F252E]">
-              Mode: {modeLabel}
-            </span>
+          <p className="mt-2 text-sm text-[#4F252E]/60">
+  ตัวอย่าง: l;ylfu8iy[ → สวัสดีครับ
+</p>
 
-            <button
-              onClick={() => setText("")}
-              className="rounded-full border-2 border-[#F4AE52] bg-white px-4 py-2 text-sm font-semibold text-[#4F252E] transition hover:bg-[#FFF7C5]"
-            >
-              Clear
-            </button>
-          </div>
+ <div className="mt-4 flex items-center justify-between gap-3">
+  <span className="rounded-full bg-[#F4AE52] px-4 py-2 text-sm font-semibold text-[#4F252E]">
+    Mode: {modeLabel}
+  </span>
+
+  <div className="flex gap-2">
+    <button
+      onClick={async () => {
+        const clipboard = await navigator.clipboard.readText();
+        setText(clipboard);
+      }}
+      className="rounded-full border-2 border-[#F4AE52] bg-white px-4 py-2 text-sm font-semibold text-[#4F252E] transition hover:bg-[#FFF7C5]"
+    >
+      Paste
+    </button>
+
+    <button
+      onClick={() => setText("")}
+      className="rounded-full border-2 border-[#F4AE52] bg-white px-4 py-2 text-sm font-semibold text-[#4F252E] transition hover:bg-[#FFF7C5]"
+    >
+      Clear
+    </button>
+  </div>
+</div>
 
           <div className="my-5 h-px bg-[#F4AE52]" />
 
