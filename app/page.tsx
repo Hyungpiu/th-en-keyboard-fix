@@ -95,14 +95,26 @@ export default function Home() {
             )}
           </div>
 
-          <button
-            onClick={copyResult}
-            className="mt-4 w-full rounded-2xl bg-[#4F252E] px-4 py-3 font-semibold text-[#FFF7C5] transition hover:bg-[#F4AE52] hover:text-[#4F252E]"
-          >
-            {copied ? "Copied!" : "Copy Result"}
-          </button>
-        </div>
-      </section>
-    </main>
+                <button
+                  onClick={copyResult}
+               className="mt-4 w-full rounded-2xl bg-[#4F252E] px-4 py-3 font-semibold text-[#FFF7C5] transition hover:bg-[#F4AE52] hover:text-[#4F252E]"
+>
+                  {copied ? "Copied!" : "Copy Result"}
+                </button>
+
+          <footer className="mt-8 text-center">
+                <p className="text-sm text-[#4F252E]/60">
+                    © 2026 พิมพ์ไรเนี่ย? เว็บแก้พิมพ์ผิดแป้นไทยอังกฤษ
+                </p>
+                  <a
+                    href="/privacy"
+                   className="text-sm underline text-[#4F252E]/60 hover:text-[#4F252E]">
+      Privacy Policy
+  </a>
+</footer>
+
+</div>
+</section>
+</main>
   );
 }
