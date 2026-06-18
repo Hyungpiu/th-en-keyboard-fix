@@ -11,12 +11,18 @@ export default function ContactPage() {
 
         <p className="font-semibold">
           Email:{" "}
-          <a href="mailto:tanya.wiang@gmail.com" className="underline">
+          <a
+            href="mailto:tanya.wiang@gmail.com"
+            className="underline hover:text-[#F4AE52]"
+          >
             tanya.wiang@gmail.com
           </a>
         </p>
 
-        <a href="/" className="mt-6 inline-block font-semibold underline">
+        <a
+          href="/"
+          className="mt-6 inline-block font-semibold underline hover:text-[#F4AE52]"
+        >
           กลับหน้าแรก
         </a>
       </section>

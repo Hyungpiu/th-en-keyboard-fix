@@ -47,6 +47,7 @@ export default function Home() {
           </label>
 
           <textarea
+            autoFocus
             value={text}
             onChange={(e) => setText(e.target.value)}
             placeholder="เช่น l;ylfu8iy["
@@ -80,6 +81,8 @@ export default function Home() {
     >
       Clear
     </button>
+
+    
   </div>
 </div>
 
@@ -102,15 +105,25 @@ export default function Home() {
                   {copied ? "Copied!" : "Copy Result"}
                 </button>
 
-          <footer className="mt-8 text-center">
-                <p className="text-sm text-[#4F252E]/60">
-                    © 2026 พิมพ์ไรเนี่ย? เว็บแก้พิมพ์ผิดแป้นไทยอังกฤษ
-                </p>
-                  <a
-                    href="/privacy"
-                   className="text-sm underline text-[#4F252E]/60 hover:text-[#4F252E]">
-      Privacy Policy
-  </a>
+          <footer className="mt-8 border-t border-[#F4AE52] pt-4 text-center text-sm text-[#4F252E]/60">
+  <p className="mb-2">
+    © 2026 พิมพ์ไรเนี่ย? เว็บแก้พิมพ์ผิดแป้นไทยอังกฤษ
+  </p>
+
+  <nav className="flex justify-center gap-4">
+    <a href="/" className="underline hover:text-[#4F252E]">
+      Home
+    </a>
+    <a href="/about" className="underline hover:text-[#4F252E]">
+      About
+    </a>
+    <a href="/contact" className="underline hover:text-[#4F252E]">
+      Contact
+    </a>
+    <a href="/privacy" className="underline hover:text-[#4F252E]">
+      Privacy
+    </a>
+  </nav>
 </footer>
 
 </div>
