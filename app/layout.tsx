@@ -16,6 +16,9 @@ export const metadata: Metadata = {
   title: "พิมพ์ไรเนี่ย? | เว็บแก้พิมพ์ผิดแป้นไทยอังกฤษ",
   description:
     "เว็บแก้พิมพ์ผิดแป้นไทยอังกฤษ แปลงข้อความที่พิมพ์ผิดแป้นจากไทยเป็นอังกฤษ หรืออังกฤษเป็นไทยได้ทันที ฟรี ไม่ต้องติดตั้ง",
+     verification: {
+    google: "-wO1rBICNwcxYOS6MpKowlwgrJyq5oWQDhSnuwCpTZY",
+  },
 };
 
 export default function RootLayout({
