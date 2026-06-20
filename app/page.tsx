@@ -25,7 +25,7 @@ export default function Home() {
       : "Auto Detect";
 
   return (
-    <main className="min-h-screen bg-[#C1EBE9] px-4 py-10 text-[#4F252E]">
+    <main className="min-h-screen bg-[#FFF] px-4 py-10 text-[#4F252E]">
       <section className="mx-auto max-w-xl">
         <div className="mb-8 text-center">
           <p className="mb-3 text-sm font-semibold text-[#F4AE52]">
@@ -36,9 +36,17 @@ export default function Home() {
   พิมพ์ไรเนี่ย?
 </h1>
 
-<p className="text-center text-gray-600 mt-2 mb-6">
-  เว็บแก้พิมพ์ผิดแป้นไทยอังกฤษ แปลงข้อความไทย ↔ อังกฤษ ได้ทันที ฟรี ไม่ต้องติดตั้ง
-</p>
+<div className="mb-6 text-center text-sm text-[#4F252E]/70">
+  <p>
+    เว็บแก้พิมพ์ผิดแป้นไทยอังกฤษ สำหรับคนที่พิมพ์ผิดภาษา
+    เช่น พิมพ์ภาษาไทยแต่แป้นเป็นอังกฤษ หรือพิมพ์อังกฤษแต่แป้นเป็นไทย
+  </p>
+
+  <p className="mt-2">
+    ลืมเปลี่ยนภาษา !  รองรับการแปลงข้อความไทย ↔ อังกฤษ อัตโนมัติ
+    แปลอักษร หรือแปลภาษาเมื่อเราลืมเปลี่ยนภาษา ใช้งานฟรี ไม่ต้องสมัครสมาชิก และไม่ต้องติดตั้งโปรแกรม
+  </p>
+</div>
         </div>
 
         <div className="rounded-3xl border-2 border-[#F4AE52] bg-[#FFF7C5] p-5 shadow-2xl">
@@ -128,6 +136,28 @@ export default function Home() {
 
 </div>
 </section>
+  <section className="mx-auto mt-10 max-w-3xl rounded-3xl bg-white/50 p-6 text-sm leading-7 text-[#4F252E]">
+    <h2 className="mb-3 text-xl font-bold">
+    เว็บแก้พิมพ์ผิดแป้นไทยอังกฤษ คืออะไร?
+    </h2>
+
+      <p>
+    พิมพ์ไรเนี่ย? เป็นเครื่องมือแปลงข้อความสำหรับผู้ที่พิมพ์ผิดภาษา
+    เช่น ตั้งใจพิมพ์ภาษาไทยแต่คีย์บอร์ดอยู่ภาษาอังกฤษ
+    หรือพิมพ์ภาษาอังกฤษแต่คีย์บอร์ดอยู่ภาษาไทย
+      </p>
+
+      <p className="mt-3">
+    ระบบจะตรวจจับและแปลงข้อความไทยเป็นอังกฤษ
+    หรืออังกฤษเป็นไทยโดยอัตโนมัติ ช่วยประหยัดเวลา
+    ไม่ต้องลบและพิมพ์ใหม่ทั้งหมด
+      </p>
+
+        <p className="mt-3">
+    เหมาะสำหรับนักเรียน นักศึกษา พนักงานออฟฟิศ
+    โปรแกรมเมอร์ และผู้ใช้งานทั่วไปที่ลืมเปลี่ยนภาษาอยู่บ่อยครั้ง
+        </p>
+  </section>
 </main>
   );
 }
