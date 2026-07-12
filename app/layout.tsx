@@ -14,11 +14,42 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://th-en-keyboard-fix.vercel.app"),
+
   title: "พิมพ์ไรเนี่ย? | เว็บแก้พิมพ์ผิดแป้นไทยอังกฤษ",
+
   description:
-    "เว็บแก้พิมพ์ผิดแป้นไทยอังกฤษ แปลงข้อความที่พิมพ์ผิดแป้นจากไทยเป็นอังกฤษ หรืออังกฤษเป็นไทยได้ทันที ฟรี ไม่ต้องติดตั้ง",
+    "เว็บแก้พิมพ์ผิดแป้นไทยอังกฤษ แปลงข้อความไทยเป็นอังกฤษ หรืออังกฤษเป็นไทย",
+    
   verification: {
-    google: "-wO1rBICNwcxYOS6MpKowlwgrJyq5oWQDhSnuwCpTZY",
+  google: "-wO1rBICNwcxYOS6MpKowlwgrJyq5oWQDhSnuwCpTZY",
+},
+
+  openGraph: {
+    title: "พิมพ์ไรเนี่ย?",
+    description:
+      "เว็บแก้พิมพ์ผิดแป้นไทยอังกฤษ ฟรี",
+    url: "https://th-en-keyboard-fix.vercel.app",
+    siteName: "พิมพ์ไรเนี่ย?",
+    locale: "th_TH",
+    type: "website",
+
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "พิมพ์ไรเนี่ย?",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "พิมพ์ไรเนี่ย?",
+    description:
+      "เว็บแก้พิมพ์ผิดแป้นไทยอังกฤษ",
+    images: ["/og-image.png"],
   },
 };
 

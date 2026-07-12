@@ -1,8 +1,21 @@
+import Image from "next/image";
+
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-[#C1EBE9] px-6 py-12 text-[#4F252E]">
       <section className="mx-auto max-w-2xl rounded-3xl border-2 border-[#F4AE52] bg-[#FFF7C5] p-6 shadow-xl">
-        <h1 className="mb-4 text-3xl font-bold">About พิมพ์ไรเนี่ย?</h1>
+        <h1 className="mb-4 text-3xl font-bold">
+          About พิมพ์ไรเนี่ย?
+        </h1>
+
+        <Image
+          src="/logo.png"
+          alt="TH EN Keyboard Fix"
+          width={420}
+          height={140}
+          className="mx-auto my-8"
+          priority
+        />
 
         <p className="mb-4 leading-relaxed">
           พิมพ์ไรเนี่ย? คือเว็บสำหรับแก้ข้อความที่พิมพ์ผิดแป้นไทยอังกฤษ
