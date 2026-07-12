@@ -1,3 +1,14 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "วิธีใช้งาน | พิมพ์ไรเนี่ย?",
+  description:
+    "วิธีใช้เว็บพิมพ์ไรเนี่ย? เพื่อแปลงข้อความที่พิมพ์ผิดแป้นไทยอังกฤษอย่างรวดเร็ว",
+  alternates: {
+    canonical: "/how-to-use",
+  },
+};
+
 export default function HowToUsePage() {
   return (
     <main className="min-h-screen bg-[#C1EBE9] px-6 py-12 text-[#4F252E]">

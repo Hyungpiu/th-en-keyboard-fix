@@ -1,3 +1,14 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "ติดต่อเรา | พิมพ์ไรเนี่ย?",
+  description:
+    "ติดต่อผู้พัฒนาเว็บพิมพ์ไรเนี่ย? เพื่อแจ้งปัญหาการใช้งานหรือเสนอแนะเพิ่มเติม",
+  alternates: {
+    canonical: "/contact",
+  },
+};
+
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-[#C1EBE9] px-6 py-12 text-[#4F252E]">

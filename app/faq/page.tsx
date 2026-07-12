@@ -1,3 +1,14 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "คำถามที่พบบ่อย | พิมพ์ไรเนี่ย?",
+  description:
+    "คำถามที่พบบ่อยเกี่ยวกับเว็บแก้พิมพ์ผิดแป้นไทยอังกฤษ การใช้งาน ความเป็นส่วนตัว และการรองรับอุปกรณ์",
+  alternates: {
+    canonical: "/faq",
+  },
+};
+
 const faqs = [
   {
     question: "เว็บพิมพ์ไรเนี่ย? ใช้ทำอะไร?",

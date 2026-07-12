@@ -1,5 +1,15 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "เกี่ยวกับเรา | พิมพ์ไรเนี่ย?",
+  description:
+    "รู้จักพิมพ์ไรเนี่ย? เว็บแก้พิมพ์ผิดแป้นไทยอังกฤษฟรี ใช้งานได้ทันทีโดยไม่ต้องติดตั้ง",
+  alternates: {
+    canonical: "/about",
+  },
+  
+};
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-[#C1EBE9] px-6 py-12 text-[#4F252E]">

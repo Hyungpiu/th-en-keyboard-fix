@@ -1,3 +1,14 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "นโยบายความเป็นส่วนตัว | พิมพ์ไรเนี่ย?",
+  description:
+    "นโยบายความเป็นส่วนตัวของเว็บพิมพ์ไรเนี่ย? และข้อมูลเกี่ยวกับการประมวลผลข้อความในเบราว์เซอร์",
+  alternates: {
+    canonical: "/privacy",
+  },
+};
+
 export default function PrivacyPage() {
   return (
     <main className="min-h-screen p-8">
