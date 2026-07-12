@@ -20,11 +20,15 @@ export const metadata: Metadata = {
 
   description:
     "เว็บแก้พิมพ์ผิดแป้นไทยอังกฤษ แปลงข้อความไทยเป็นอังกฤษ หรืออังกฤษเป็นไทย",
-    
+
   verification: {
   google: "-wO1rBICNwcxYOS6MpKowlwgrJyq5oWQDhSnuwCpTZY",
 },
 
+  alternates: {
+    canonical: "/",
+  },
+  
   openGraph: {
     title: "พิมพ์ไรเนี่ย?",
     description:
