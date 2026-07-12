@@ -22,6 +22,28 @@ export const metadata: Metadata = {
   },
 };
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  name: "พิมพ์ไรเนี่ย?",
+  alternateName: "TH/EN Keyboard Fix",
+  url: "https://th-en-keyboard-fix.vercel.app",
+  applicationCategory: "UtilityApplication",
+  operatingSystem: "Any",
+  description:
+    "เว็บแก้พิมพ์ผิดแป้นไทยอังกฤษ แปลงข้อความไทยเป็นอังกฤษ หรืออังกฤษเป็นไทยได้ทันที ฟรี",
+  inLanguage: ["th", "en"],
+  offers: {
+    "@type": "Offer",
+    price: "0",
+    priceCurrency: "THB",
+  },
+  creator: {
+    "@type": "Person",
+    name: "Hyungpiu",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -33,6 +55,14 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <Script
+          id="structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(structuredData),
+          }}
+        />
+
         {children}
 
         <Script
@@ -45,7 +75,6 @@ export default function RootLayout({
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-
             gtag('config', 'G-7FWNZZ1S36');
           `}
         </Script>
