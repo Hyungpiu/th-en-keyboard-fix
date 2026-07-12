@@ -130,22 +130,33 @@ export default function Home() {
     © 2026 พิมพ์ไรเนี่ย? เว็บแก้พิมพ์ผิดแป้นไทยอังกฤษ
   </p>
 
-  <nav className="flex justify-center gap-4">
-    <a href="/" className="underline hover:text-[#4F252E]">
-      Home
-    </a>
-    <a href="/about" className="underline hover:text-[#4F252E]">
-      About
-    </a>
-    <a href="/contact" className="underline hover:text-[#4F252E]">
-      Contact
-    </a>
-    <a href="/privacy" className="underline hover:text-[#4F252E]">
-      Privacy
-    </a>
-  </nav>
-</footer>
+  <nav className="flex flex-wrap justify-center gap-4">
+  <a href="/" className="underline hover:text-[#4F252E]">
+    Home
+  </a>
 
+  <a href="/about" className="underline hover:text-[#4F252E]">
+    About
+  </a>
+
+  <a href="/how-to-use" className="underline hover:text-[#4F252E]">
+    How to Use
+  </a>
+
+  <a href="/faq" className="underline hover:text-[#4F252E]">
+    FAQ
+  </a>
+
+  <a href="/contact" className="underline hover:text-[#4F252E]">
+    Contact
+  </a>
+
+  <a href="/privacy" className="underline hover:text-[#4F252E]">
+    Privacy
+  </a>
+</nav>
+</footer>
+            
 </div>
 </section>
   <section className="mx-auto mt-10 max-w-3xl rounded-3xl bg-white/50 p-6 text-sm leading-7 text-[#4F252E]">
