@@ -140,8 +140,11 @@ export default function Home() {
           />
 
           <p className="mt-2 text-sm text-[#4F252E]/60">
-            ตัวอย่าง: l;ylfu8iy[ → สวัสดีครับ
-          </p>
+            ตัวอย่าง: l;ylfu8iy[ → สวัสดีครับ</p>
+
+               <p className="shrink-0">
+                  {text.length.toLocaleString()} ตัวอักษร
+              </p>
 
           <div className="mt-4 flex items-center justify-between gap-3">
             <span className="rounded-full bg-[#F4AE52] px-4 py-2 text-sm font-semibold">
@@ -176,7 +179,13 @@ export default function Home() {
 
           <div className="my-5 h-px bg-[#F4AE52]" />
 
+          <div className="mb-2 flex items-center justify-between gap-3">
           <label className="mb-2 block text-sm font-medium">ผลลัพธ์</label>
+
+           <p className="text-sm text-[#4F252E]/60">
+              {result.length.toLocaleString()} ตัวอักษร
+           </p>
+          </div>
 
           <div className="min-h-24 whitespace-pre-wrap break-words rounded-2xl border-2 border-[#F4AE52] bg-white p-4 text-xl leading-relaxed">
             {result || (
