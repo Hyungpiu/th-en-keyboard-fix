@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type KeyboardEvent } from "react";
 import { autoConvert, detectMode } from "@/lib/keyboardMap";
 
 type HistoryItem = {
@@ -66,20 +66,50 @@ export default function Home() {
       saveHistory(text, result);
 
       setCopied(true);
-      setTimeout(() => setCopied(false), 1200);
+
+      setTimeout(() => {
+        setCopied(false);
+      }, 1200);
     } catch (error) {
       console.error("Unable to copy result:", error);
     }
   };
 
+  const handleKeyboardShortcut = (
+    event: KeyboardEvent<HTMLTextAreaElement>
+  ) => {
+    if ((event.ctrlKey || event.metaKey) && event.key === "Enter") {
+      event.preventDefault();
+      void copyResult();
+    }
+  };
+
   const reuseHistoryItem = (item: HistoryItem) => {
     setText(item.input);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   const clearHistory = () => {
     setHistory([]);
-    localStorage.removeItem(HISTORY_KEY);
+
+    try {
+      localStorage.removeItem(HISTORY_KEY);
+    } catch (error) {
+      console.error("Unable to clear conversion history:", error);
+    }
+  };
+
+  const pasteText = async () => {
+    try {
+      const clipboardText = await navigator.clipboard.readText();
+      setText(clipboardText);
+    } catch (error) {
+      console.error("Unable to read clipboard:", error);
+    }
   };
 
   const modeLabel =
@@ -134,17 +164,19 @@ export default function Home() {
             autoFocus
             value={text}
             onChange={(event) => setText(event.target.value)}
+            onKeyDown={handleKeyboardShortcut}
             placeholder="เช่น l;ylfu8iy["
             rows={5}
             className="w-full resize-none rounded-2xl border-2 border-[#F4AE52] bg-white p-4 text-lg outline-none placeholder:text-[#4F252E]/40 focus:border-[#4F252E]"
           />
 
-          <p className="mt-2 text-sm text-[#4F252E]/60">
-            ตัวอย่าง: l;ylfu8iy[ → สวัสดีครับ</p>
+          <div className="mt-2 flex items-center justify-between gap-3 text-sm text-[#4F252E]/60">
+            <p>ตัวอย่าง: l;ylfu8iy[ → สวัสดีครับ</p>
 
-               <p className="shrink-0">
-                  {text.length.toLocaleString()} ตัวอักษร
-              </p>
+            <p className="shrink-0">
+              {text.length.toLocaleString()} ตัวอักษร
+            </p>
+          </div>
 
           <div className="mt-4 flex items-center justify-between gap-3">
             <span className="rounded-full bg-[#F4AE52] px-4 py-2 text-sm font-semibold">
@@ -154,14 +186,7 @@ export default function Home() {
             <div className="flex gap-2">
               <button
                 type="button"
-                onClick={async () => {
-                  try {
-                    const clipboard = await navigator.clipboard.readText();
-                    setText(clipboard);
-                  } catch (error) {
-                    console.error("Unable to read clipboard:", error);
-                  }
-                }}
+                onClick={pasteText}
                 className="rounded-full border-2 border-[#F4AE52] bg-white px-4 py-2 text-sm font-semibold transition hover:bg-[#FFF7C5]"
               >
                 Paste
@@ -180,11 +205,11 @@ export default function Home() {
           <div className="my-5 h-px bg-[#F4AE52]" />
 
           <div className="mb-2 flex items-center justify-between gap-3">
-          <label className="mb-2 block text-sm font-medium">ผลลัพธ์</label>
+            <label className="block text-sm font-medium">ผลลัพธ์</label>
 
-           <p className="text-sm text-[#4F252E]/60">
+            <p className="text-sm text-[#4F252E]/60">
               {result.length.toLocaleString()} ตัวอักษร
-           </p>
+            </p>
           </div>
 
           <div className="min-h-24 whitespace-pre-wrap break-words rounded-2xl border-2 border-[#F4AE52] bg-white p-4 text-xl leading-relaxed">
@@ -203,6 +228,10 @@ export default function Home() {
           >
             {copied ? "Copied!" : "Copy Result"}
           </button>
+
+          <p className="mt-2 text-center text-xs text-[#4F252E]/50">
+            กด Ctrl + Enter เพื่อคัดลอกผลลัพธ์
+          </p>
 
           {history.length > 0 && (
             <section className="mt-8 border-t border-[#F4AE52] pt-5">
@@ -262,21 +291,26 @@ export default function Home() {
               <a href="/" className="underline hover:text-[#4F252E]">
                 Home
               </a>
+
               <a href="/about" className="underline hover:text-[#4F252E]">
                 About
               </a>
+
               <a
                 href="/how-to-use"
                 className="underline hover:text-[#4F252E]"
               >
                 How to Use
               </a>
+
               <a href="/faq" className="underline hover:text-[#4F252E]">
                 FAQ
               </a>
+
               <a href="/contact" className="underline hover:text-[#4F252E]">
                 Contact
               </a>
+
               <a href="/privacy" className="underline hover:text-[#4F252E]">
                 Privacy
               </a>
