@@ -22,17 +22,16 @@ export const metadata: Metadata = {
     "เว็บแก้พิมพ์ผิดแป้นไทยอังกฤษ แปลงข้อความไทยเป็นอังกฤษ หรืออังกฤษเป็นไทย",
 
   verification: {
-  google: "-wO1rBICNwcxYOS6MpKowlwgrJyq5oWQDhSnuwCpTZY",
-},
+    google: "-wO1rBICNwcxYOS6MpKowlwgrJyq5oWQDhSnuwCpTZY",
+  },
 
   alternates: {
     canonical: "/",
   },
-  
+
   openGraph: {
     title: "พิมพ์ไรเนี่ย?",
-    description:
-      "เว็บแก้พิมพ์ผิดแป้นไทยอังกฤษ ฟรี",
+    description: "เว็บแก้พิมพ์ผิดแป้นไทยอังกฤษ ฟรี",
     url: "https://th-en-keyboard-fix.vercel.app",
     siteName: "พิมพ์ไรเนี่ย?",
     locale: "th_TH",
@@ -51,8 +50,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "พิมพ์ไรเนี่ย?",
-    description:
-      "เว็บแก้พิมพ์ผิดแป้นไทยอังกฤษ",
+    description: "เว็บแก้พิมพ์ผิดแป้นไทยอังกฤษ",
     images: ["/og-image.png"],
   },
 };
@@ -100,6 +98,16 @@ export default function RootLayout({
 
         {children}
 
+        {/* Google AdSense */}
+        <Script
+          id="google-adsense"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9907972733286745"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+
+        {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-7FWNZZ1S36"
           strategy="afterInteractive"
